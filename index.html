@@ -2,108 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Kennedy Banda | AI & IoT Developer Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kennedy Banda | AI & IoT Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="description" content="Kennedy Banda's AI & IoT Developer portfolio, projects, skills, and contact information. Innovating technology for Zambia." />
+  <meta name="keywords" content="Kennedy Banda, AI, IoT, Developer, Zambia, Full-Stack, Portfolio" />
+  <meta name="author" content="Kennedy Banda" />
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Kennedy Banda | AI & IoT Developer Portfolio" />
+  <meta property="og:description" content="Showcasing innovative AI & IoT projects, technical skills, and contact info." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/ken004Ban" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="canonical" href="https://kennedy-portfolio.vercel.app/" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <!-- Defer Font Awesome for better perf -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     .skill-badge {
-      transition: all 0.3s ease;
+      transition: all 0.2s cubic-bezier(.4,0,.2,1);
+      outline: none;
     }
-    .skill-badge:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .skill-badge:hover, .skill-badge:focus {
+      transform: scale(1.06) translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,.07);
+      border-color: #2563eb;
+      background: #F0F7FF;
+      color: #2563eb;
     }
-    .project-card:hover {
-      transform: translateY(-5px);
-      transition: all 0.3s ease;
+    .project-card {
+      transition: all 0.25s cubic-bezier(.4,0,.2,1);
     }
+    .project-card:hover, .project-card:focus-within {
+      transform: scale(1.03) translateY(-3px);
+      box-shadow: 0 10px 24px rgba(37,99,235,0.09);
+      border-color: #2563eb;
+    }
+    ::selection { background: #93c5fd; color: #fff; }
   </style>
 </head>
+<body class="font-sans text-gray-900 bg-white antialiased">
 
-<body class="font-sans text-gray-900 bg-white">
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-white shadow-sm">
+  <!-- Improved Navigation -->
+  <nav class="sticky top-0 z-50 bg-white shadow-md" aria-label="Primary Navigation">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex items-center">
-          <a href="#hero" class="text-xl font-medium text-blue-600">Kennedy Banda</a>
-        </div>
+      <div class="flex justify-between h-16 items-center">
+        <a href="#hero" class="text-2xl font-bold text-blue-600 focus:outline-blue-700 transition" aria-label="Go to home">
+          Kennedy Banda
+        </a>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-          <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
-          <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
-          <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <div class="md:hidden flex items-center">
-          <button id="menu-toggle" class="text-gray-600 hover:text-blue-600">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
+        <!-- Mobile hamburger -->
+        <button id="menu-toggle" aria-label="Open mobile menu" class="md:hidden text-gray-600 ring-2 ring-transparent focus:ring-blue-400 rounded transition">
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-50">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600">About</a>
-        <a href="#projects" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Projects</a>
-        <a href="#skills" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Skills</a>
-        <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</a>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200 animate-slide-down">
+      <div class="flex flex-col px-4 py-2">
+        <a href="#about" class="nav-link-mobile">About</a>
+        <a href="#projects" class="nav-link-mobile">Projects</a>
+        <a href="#skills" class="nav-link-mobile">Skills</a>
+        <a href="#contact" class="nav-link-mobile">Contact</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="py-16 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Kennedy Banda</h1>
-      <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
+  <section id="hero" class="py-20 bg-gradient-to-tr from-blue-50 via-indigo-50 to-teal-50 flex flex-col justify-center items-center">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <!-- Optionally, add a profile picture -->
+      <img src="https://avatars.githubusercontent.com/ken004Ban" alt="Kennedy Banda Profile" class="mx-auto w-32 h-32 rounded-full mb-6 shadow-lg" loading="lazy" />
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
+        Kennedy Banda
+      </h1>
+      <h2 class="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
         AI & IoT Enthusiast | Full-Stack Developer | Innovating for Zambia
       </h2>
-      <p class="text-lg text-blue-600 font-medium">Building intelligent systems that impact real lives</p>
+      <p class="text-lg text-blue-600 font-semibold mb-6">
+        Building intelligent systems that impact real lives
+      </p>
+      <a href="#contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 focus:outline-blue-700 transition font-semibold">Hire Me</a>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16">
+  <section id="about" class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold mb-8">About Me</h2>
+      <h2 class="text-3xl font-bold mb-8">About Me</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
-          <p class="text-gray-600 leading-relaxed mb-6">
-            I'm a Computer Science graduate and passionate developer with hands-on experience in
-            <strong>AI, IoT, and full-stack development</strong>. My work combines innovation and practicality to solve
-            real African challenges. I enjoy building solutions that bridge software and hardware — from APIs and
-            dashboards to embedded systems.  
+          <p class="text-gray-600 mb-5 leading-relaxed">
+            I'm a Computer Science graduate, passionate about developing <strong>AI, IoT, and full-stack</strong> solutions for Africa's toughest challenges. My expertise spans intelligent APIs, dashboards, and embedded hardware.
           </p>
-          <p class="text-gray-600 leading-relaxed mb-6">
-            I’ve worked with technologies like React, Node.js, Django, and Python, while exploring AI frameworks and
-            microcontrollers such as ESP32 and Jetson. My long-term goal is to build intelligent, Zambia-centered systems
-            that enhance everyday life — in farming, education, and smart services.
+          <p class="text-gray-600 mb-5 leading-relaxed">
+            I work with React, Node.js, Django, Python, and explore AI frameworks and microcontrollers (ESP32, Jetson). My vision: <strong>Zambia-centered AI systems</strong> that advance farming, education, and local services.
           </p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <h3 class="text-lg font-medium mb-4">Contact Info</h3>
-          <ul class="space-y-2">
+        <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+          <ul class="space-y-3">
             <li class="flex items-center">
-              <i class="fas fa-envelope mr-3 text-blue-600"></i>
-              <a href="mailto:kennedybanda.info@gmail.com" class="text-gray-600 hover:text-blue-600">kennedybanda.info@gmail.com</a>
+              <i class="fas fa-envelope mr-2 text-blue-600"></i>
+              <a href="mailto:kennedybanda.info@gmail.com" class="contact-link">kennedybanda.info@gmail.com</a>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-phone mr-3 text-blue-600"></i>
-              <a href="tel:+260974136598" class="text-gray-600 hover:text-blue-600">+260 974 136 598</a>
+              <i class="fas fa-phone mr-2 text-blue-600"></i>
+              <a href="tel:+260974136598" class="contact-link">+260 974 136 598</a>
             </li>
             <li class="flex items-center">
-              <i class="fab fa-github mr-3 text-blue-600"></i>
-              <a href="https://github.com/kennedybanda" target="_blank" class="text-gray-600 hover:text-blue-600">GitHub</a>
+              <i class="fab fa-github mr-2 text-blue-600"></i>
+              <a href="https://github.com/ken004Ban" target="_blank" rel="noopener" class="contact-link">GitHub</a>
             </li>
             <li class="flex items-center">
-              <i class="fab fa-linkedin mr-3 text-blue-600"></i>
-              <a href="https://linkedin.com/in/kennedybanda" target="_blank" class="text-gray-600 hover:text-blue-600">LinkedIn</a>
+              <i class="fab fa-linkedin mr-2 text-blue-600"></i>
+              <a href="https://linkedin.com/in/kennedybanda" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
             </li>
           </ul>
         </div>
@@ -114,105 +139,168 @@
   <!-- Projects Section -->
   <section id="projects" class="py-16 bg-gray-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold mb-8">Highlighted Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">FamWiseX</h3>
-            <p class="text-gray-600 mb-4">
-              AI-powered farming system designed to optimize soil, water, and crop management using IoT sensors and
-              machine learning insights. Currently in the research and prototyping stage.
-            </p>
+      <h2 class="text-3xl font-bold mb-8">Highlighted Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div tabindex="0" class="project-card bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg p-6 focus:ring-2 focus:ring-blue-300 focus:outline-none">
+          <div class="flex items-center mb-2">
+            <i class="fas fa-seedling text-2xl text-green-500 mr-3"></i>
+            <h3 class="text-xl font-semibold">FamWiseX</h3>
           </div>
+          <p class="text-gray-600 mb-2">
+            AI-powered farming: optimize soil, water & crop mgmt using IoT sensors + ML. Prototyping advanced solutions for Zambian farms.
+          </p>
         </div>
-
-        <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">VaultSync</h3>
-            <p class="text-gray-600 mb-4">
-              A secure, cross-platform file-sharing system built with React Native and Node.js. Supports offline transfer
-              via Bluetooth, Wi-Fi, and LAN, and features encryption for privacy.
-            </p>
+        <div tabindex="0" class="project-card bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg p-6 focus:ring-2 focus:ring-blue-300 focus:outline-none">
+          <div class="flex items-center mb-2">
+            <i class="fas fa-lock text-2xl text-indigo-500 mr-3"></i>
+            <h3 class="text-xl font-semibold">VaultSync</h3>
           </div>
+          <p class="text-gray-600 mb-2">
+            Secure cross-platform file-sharing app (React Native, Node.js). Offline transfer: Bluetooth, Wi-Fi, LAN; all encrypted for privacy.
+          </p>
         </div>
-
-        <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Zambia Explorer App</h3>
-            <p class="text-gray-600 mb-4">
-              A React web app integrating APIs for country info, sunrise/sunset data, and live Zambian news. Designed to
-              showcase local tech and data applications.
-            </p>
+        <div tabindex="0" class="project-card bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg p-6 focus:ring-2 focus:ring-blue-300 focus:outline-none">
+          <div class="flex items-center mb-2">
+            <i class="fas fa-globe-africa text-2xl text-blue-500 mr-3"></i>
+            <h3 class="text-xl font-semibold">Zambia Explorer App</h3>
           </div>
+          <p class="text-gray-600 mb-2">
+            Web app (React): live Zambian news, country info, sunrise/sunset data. Local tech showcased with modern data APIs.
+          </p>
         </div>
-
-        <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Pharmacy Management System</h3>
-            <p class="text-gray-600 mb-4">
-              Django-based system managing sales, stock, and reporting workflows for local pharmacies. Focused on secure
-              role-based access and usability.
-            </p>
+        <div tabindex="0" class="project-card bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg p-6 focus:ring-2 focus:ring-blue-300 focus:outline-none">
+          <div class="flex items-center mb-2">
+            <i class="fas fa-prescription-bottle text-2xl text-teal-500 mr-3"></i>
+            <h3 class="text-xl font-semibold">Pharmacy Management System</h3>
           </div>
+          <p class="text-gray-600 mb-2">
+            Pharmacy app (Django): sales, reporting, secure roles. Built for local clinics; improves stock/workflow efficiency.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-16">
+  <section id="skills" class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold mb-8">Technical Skills</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <h3 class="text-lg font-medium mb-4">Programming & Frameworks</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Python</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">C++</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">React</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Node.js</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Django</span>
+      <h2 class="text-3xl font-bold mb-8">Technical Skills</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Programming & Frameworks -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold mb-4">Programming & Frameworks</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">Python</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">C++</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">React</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">Node.js</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">Django</span>
           </div>
         </div>
-
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <h3 class="text-lg font-medium mb-4">AI, IoT & Tools</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">TensorFlow</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">ONNX</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">ESP32</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Raspberry Pi</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Git/GitHub</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Ubuntu/Linux</span>
-            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Docker</span>
+        <!-- AI, IoT & Tools -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold mb-4">AI, IoT & Tools</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">TensorFlow</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">ONNX</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">ESP32</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">Raspberry Pi</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">Git/GitHub</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">Ubuntu/Linux</span>
+            <span class="skill-badge bg-white px-4 py-2 rounded-full border border-gray-200 text-sm" tabindex="0">Docker</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact Section with Form -->
   <section id="contact" class="py-16 bg-gray-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold mb-8">Get In Touch</h2>
-      <div class="text-center">
-        <p class="text-gray-600 mb-6">Interested in collaborating or discussing AI & IoT projects? Reach out anytime.</p>
-        <a href="mailto:kennedybanda.info@gmail.com" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Contact Me</a>
+      <h2 class="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
+      <div class="flex flex-col items-center">
+        <p class="text-gray-700 mb-6 text-center text-lg">Interested in collaborating or discussing AI & IoT projects? Send me a message or email.</p>
+        <form action="mailto:kennedybanda.info@gmail.com" method="POST" enctype="text/plain" class="w-full max-w-md bg-white p-6 rounded-xl shadow-sm mb-4">
+          <label for="name" class="block text-gray-600 font-semibold mb-2">Name</label>
+          <input id="name" name="name" type="text" required class="w-full mb-4 px-4 py-2 border border-gray-200 rounded focus:outline-blue-600" />
+          <label for="email" class="block text-gray-600 font-semibold mb-2">Email</label>
+          <input id="email" name="email" type="email" required class="w-full mb-4 px-4 py-2 border border-gray-200 rounded focus:outline-blue-600" />
+          <label for="msg" class="block text-gray-600 font-semibold mb-2">Message</label>
+          <textarea id="msg" name="message" rows="3" required class="w-full mb-4 px-4 py-2 border border-gray-200 rounded focus:outline-blue-600"></textarea>
+          <button type="submit" class="w-full bg-blue-600 text-white py-2 px-6 rounded font-semibold shadow hover:bg-blue-700 focus:outline-blue-700 transition">Send Message</button>
+        </form>
+        <div>
+          <a href="mailto:kennedybanda.info@gmail.com" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 focus:outline-blue-700 transition font-semibold">Contact Me Directly</a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Scroll-to-top Button -->
+  <button id="scrollToTopBtn" aria-label="Back to top" class="fixed bottom-6 right-6 z-50 hidden bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition focus:outline-blue-800">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <!-- Footer -->
-  <footer class="py-8 bg-white border-t border-gray-200">
-    <div class="max-w-5xl mx-auto text-center text-gray-600">
-      © 2025 Kennedy Banda. All rights reserved.
+  <footer class="py-8 bg-white border-t border-gray-200 mt-10">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 text-gray-600">
+      <div>&copy; <span id="year"></span> Kennedy Banda. All rights reserved.</div>
+      <div class="space-x-4 mt-4 md:mt-0">
+        <a href="https://github.com/ken004Ban" target="_blank" rel="noopener" class="inline-block text-xl hover:text-blue-600 focus:outline-blue-700 transition" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/kennedybanda" target="_blank" rel="noopener" class="inline-block text-xl hover:text-blue-600 focus:outline-blue-700 transition" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
   </footer>
 
+  <!-- JS: Mobile navigation & scroll-to-top -->
   <script>
-    document.getElementById('menu-toggle').addEventListener('click', function () {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+    // Mobile menu controls
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', !mobileMenu.classList.contains('hidden'));
     });
+    // Keyboard: ESC to close mobile menu
+    document.addEventListener('keydown', function(e){
+      if(e.key==='Escape'){ mobileMenu.classList.add('hidden'); menuToggle.setAttribute('aria-expanded',"false"); }
+    });
+
+    // Scroll-to-top button
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 350) scrollBtn.classList.remove('hidden');
+      else scrollBtn.classList.add('hidden');
+    });
+    scrollBtn.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Year in footer for copyright
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <style>
+    .nav-link, .nav-link-mobile, .contact-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: #4B5563;
+      text-decoration: none;
+      transition: color 0.13s;
+    }
+    .nav-link:hover, .nav-link:focus, .nav-link-mobile:hover, .nav-link-mobile:focus, .contact-link:hover, .contact-link:focus {
+      color: #2563eb;
+      outline: none;
+    }
+    .nav-link-mobile {
+      font-weight: 500;
+      padding: 0.75rem 0;
+    }
+    @keyframes slide-down {
+      0% { opacity: 0; transform: translateY(-15px);}
+      100%{ opacity: 1; transform: translateY(0);}
+    }
+    .animate-slide-down { animation: slide-down 0.3s ease;}
+  </style>
 </body>
 </html>
