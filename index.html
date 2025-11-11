@@ -1,289 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kennedy Banda | Full-Stack Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .skill-badge {
-            transition: all 0.3s ease;
-        }
-        .skill-badge:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kennedy Banda | AI & IoT Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .skill-badge {
+      transition: all 0.3s ease;
+    }
+    .skill-badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+    }
+  </style>
 </head>
+
 <body class="font-sans text-gray-900 bg-white">
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white shadow-sm">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#hero" class="text-xl font-medium text-blue-600">Kennedy Banda</a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
-                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="menu-toggle" class="text-gray-600 hover:text-blue-600">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="#hero" class="text-xl font-medium text-blue-600">Kennedy Banda</a>
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-50">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600">About</a>
-                <a href="#projects" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Projects</a>
-                <a href="#skills" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Skills</a>
-                <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</a>
-            </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+          <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
+          <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
+          <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="py-16 bg-gray-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Kennedy Banda</h1>
-                <h2 class="text-xl md:text-2xl text-gray-600 mb-6">Full-Stack Developer | React • Node.js • Django</h2>
-                <p class="text-lg text-blue-600 font-medium">Solving African Challenges with Code</p>
-            </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-toggle" class="text-gray-600 hover:text-blue-600">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
-    </section>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-50">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600">About</a>
+        <a href="#projects" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Projects</a>
+        <a href="#skills" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Skills</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-16">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold mb-8">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        I'm a Computer Science graduate with hands-on experience in full-stack development. 
-                        Passionate about solving real-world African challenges through technology. 
-                        Experienced in React, Node.js, Django, React Native, and SQL. 
-                        I focus on clean, maintainable code, intuitive UX, and delivering meaningful impact.
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="text-lg font-medium mb-4">Contact Info</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-blue-600"></i>
-                            <a href="mailto:kennedybanda.info@gmail.com" class="text-gray-600 hover:text-blue-600">kennedybanda.info@gmail.com</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-3 text-blue-600"></i>
-                            <a href="tel:+260974136598" class="text-gray-600 hover:text-blue-600">+260 974 136 598</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fab fa-github mr-3 text-blue-600"></i>
-                            <a href="#" class="text-gray-600 hover:text-blue-600">GitHub</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fab fa-linkedin mr-3 text-blue-600"></i>
-                            <a href="#" class="text-gray-600 hover:text-blue-600">LinkedIn</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+  <!-- Hero Section -->
+  <section id="hero" class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Kennedy Banda</h1>
+      <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
+        AI & IoT Enthusiast | Full-Stack Developer | Innovating for Zambia
+      </h2>
+      <p class="text-lg text-blue-600 font-medium">Building intelligent systems that impact real lives</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-8">About Me</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            I'm a Computer Science graduate and passionate developer with hands-on experience in
+            <strong>AI, IoT, and full-stack development</strong>. My work combines innovation and practicality to solve
+            real African challenges. I enjoy building solutions that bridge software and hardware — from APIs and
+            dashboards to embedded systems.  
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            I’ve worked with technologies like React, Node.js, Django, and Python, while exploring AI frameworks and
+            microcontrollers such as ESP32 and Jetson. My long-term goal is to build intelligent, Zambia-centered systems
+            that enhance everyday life — in farming, education, and smart services.
+          </p>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold mb-8">Projects</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Project 1 -->
-                <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">VaultSync</h3>
-                        <p class="text-gray-600 mb-4">A secure, cross-platform file-sharing app with React Native and Node.js. Features AES-256 encryption and offline support.</p>
-                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            View on GitHub
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Ph. Nancy Management System</h3>
-                        <p class="text-gray-600 mb-4">Django-based inventory and sales system with SQL database, CRUD operations, and reporting dashboard.</p>
-                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            View on GitHub
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Blog API</h3>
-                        <p class="text-gray-600 mb-4">RESTful API with Node.js, Express, PostgreSQL for blog post management.</p>
-                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800">
-                            View on GitHub
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div
-                     <!-- Project 4 -->
-            <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">E-commerce Website</h3>
-                    <p class="text-gray-600 mb-4">An e-commerce platform with a React frontend and Node.js backend. Includes product management, cart functionality, and user authentication.</p>
-                    <a href="https://github.com/yourusername/e-commerce-website" class="inline-flex items-center text-blue-600 hover:text-blue-800" target="_blank">
-                        View on GitHub
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-            </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-lg font-medium mb-4">Contact Info</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-blue-600"></i>
+              <a href="mailto:kennedybanda.info@gmail.com" class="text-gray-600 hover:text-blue-600">kennedybanda.info@gmail.com</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-3 text-blue-600"></i>
+              <a href="tel:+260974136598" class="text-gray-600 hover:text-blue-600">+260 974 136 598</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fab fa-github mr-3 text-blue-600"></i>
+              <a href="https://github.com/kennedybanda" target="_blank" class="text-gray-600 hover:text-blue-600">GitHub</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fab fa-linkedin mr-3 text-blue-600"></i>
+              <a href="https://linkedin.com/in/kennedybanda" target="_blank" class="text-gray-600 hover:text-blue-600">LinkedIn</a>
+            </li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold mb-8">Skills</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Frontend Skills -->
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="text-lg font-medium mb-4">Frontend</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">React</span>
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">React Native</span>
-                    </div>
-                </div>
-                
-                <!-- Backend Skills -->
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="text-lg font-medium mb-4">Backend</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">Node.js</span>
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">Express</span>
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">Django</span>
-                    </div>
-                </div>
-                
-                <!-- Database Skills -->
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="text-lg font-medium mb-4">Databases</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">MongoDB</span>
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">SQL</span>
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">PostgreSQL</span>
-                    </div>
-                </div>
-                
-                <!-- Tools & Other Skills -->
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="text-lg font-medium mb-4">Tools & Other</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">Git/GitHub</span>
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">Linux/Bash</span>
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">AWS Basics</span>
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">IT Support</span>
-                        <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">Networking</span>
-                    </div>
-                </div>
-            </div>
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-8">Highlighted Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">FamWiseX</h3>
+            <p class="text-gray-600 mb-4">
+              AI-powered farming system designed to optimize soil, water, and crop management using IoT sensors and
+              machine learning insights. Currently in the research and prototyping stage.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold mb-8">Get In Touch</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Interested in working together or have a project in mind? Feel free to reach out through any of the channels below.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-blue-600 mr-4 text-xl"></i>
-                            <div>
-                                <h3 class="font-medium">Email</h3>
-                                <a href="mailto:kennedybanda.info@gmail.com" class="text-gray-600 hover:text-blue-600">kennedybanda.info@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-phone text-blue-600 mr-4 text-xl"></i>
-                            <div>
-                                <h3 class="font-medium">Phone</h3>
-                                <a href="tel:+260974136598" class="text-gray-600 hover:text-blue-600">+260 974 136 598</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-medium mb-4">Connect with me</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-white p-3 rounded-full border border-gray-200 hover:bg-blue-50 hover:text-blue-600 transition">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="#" class="bg-white p-3 rounded-full border border-gray-200 hover:bg-blue-50 hover:text-blue-600 transition">
-                            <i class="fab fa-linkedin text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">VaultSync</h3>
+            <p class="text-gray-600 mb-4">
+              A secure, cross-platform file-sharing system built with React Native and Node.js. Supports offline transfer
+              via Bluetooth, Wi-Fi, and LAN, and features encryption for privacy.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="py-8 bg-white border-t border-gray-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-600">&copy; 2023 Kennedy Banda. All rights reserved.</p>
+        <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Zambia Explorer App</h3>
+            <p class="text-gray-600 mb-4">
+              A React web app integrating APIs for country info, sunrise/sunset data, and live Zambian news. Designed to
+              showcase local tech and data applications.
+            </p>
+          </div>
         </div>
-    </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+        <div class="project-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Pharmacy Management System</h3>
+            <p class="text-gray-600 mb-4">
+              Django-based system managing sales, stock, and reporting workflows for local pharmacies. Focused on secure
+              role-based access and usability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Close mobile menu when clicking a link
-        const menuLinks = document.querySelectorAll('#mobile-menu a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                document.getElementById('mobile-menu').classList.add('hidden');
-            });
-        });
+  <!-- Skills Section -->
+  <section id="skills" class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-8">Technical Skills</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-lg font-medium mb-4">Programming & Frameworks</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Python</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">C++</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">React</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Node.js</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Django</span>
+          </div>
+        </div>
 
-        // Add shadow to navbar on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 10) {
-                nav.classList.add('shadow-md');
-                nav.classList.remove('shadow-sm');
-            } else {
-                nav.classList.remove('shadow-md');
-                nav.classList.add('shadow-sm');
-            }
-        });
-    </script>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-lg font-medium mb-4">AI, IoT & Tools</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">TensorFlow</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">ONNX</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">ESP32</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Raspberry Pi</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Git/GitHub</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Ubuntu/Linux</span>
+            <span class="skill-badge bg-white px-3 py-1 rounded-full border border-gray-200 text-sm">Docker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-8">Get In Touch</h2>
+      <div class="text-center">
+        <p class="text-gray-600 mb-6">Interested in collaborating or discussing AI & IoT projects? Reach out anytime.</p>
+        <a href="mailto:kennedybanda.info@gmail.com" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-white border-t border-gray-200">
+    <div class="max-w-5xl mx-auto text-center text-gray-600">
+      © 2025 Kennedy Banda. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
